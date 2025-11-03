@@ -1,49 +1,57 @@
-# 🎶 Worship Analytics Dashboard | Music Ministry Performance Insights
+# Worship Analytics Dashboard -- Song Usage, Trends & KPI Tracking
 
-## Executive Summary
-Church music teams need structured tools to track song usage, practice schedules, and CCLI reporting.  
-This project provides a worship analytics dashboard, reducing reporting errors by 40% and improving scheduling transparency.  
+## Overview
 
----
+This project analyzes worship song usage, rotation patterns, and
+ministry KPIs across historical setlists. It transforms raw planning
+data into clean datasets and delivers insights through clear
+visualizations and summary metrics.
 
-## Business Problem
-Music ministries often struggle with:  
-- Tracking practice sessions  
-- Reporting CCLI song usage  
-- Balancing setlists  
+## Business Need
 
-📊 Example visuals:  
+Church worship teams often repeat songs without realizing how heavily
+certain titles are used. This leads to limited variety, lower
+engagement, and difficulty planning balanced setlists. Leaders need
+data-driven visibility into: - Song frequency and rotation gaps\
+- Overused or underutilized songs\
+- Setlist patterns by month, season, or service\
+- KPI trends that impact planning and team coordination
 
-<p align="center"><img src="https://github.com/YSayaovong/HFBC_Praise_Worship/blob/main/screenshots/top_10_52_wks_list.png" alt="Top 10 Songs (52 Weeks - List)" width="800"/></p>  
+This dashboard solves that gap by turning raw setlists into actionable
+analytics.
 
-<p align="center"><img src="https://github.com/YSayaovong/HFBC_Praise_Worship/blob/main/screenshots/top_10_52_wks_pie.png" alt="Top 10 Songs (52 Weeks - Pie)" width="800"/></p>  
+## What This Project Solves
 
-<p align="center"><img src="https://github.com/YSayaovong/HFBC_Praise_Worship/blob/main/screenshots/top_10_all_time_list.png" alt="Top 10 Songs (All Time - List)" width="800"/></p>  
+-   Tracks song usage across months and years\
+-   Highlights over-reliance on specific songs\
+-   Identifies rotation gaps to support better planning\
+-   Provides KPIs for song diversity, service consistency, and
+    scheduling patterns\
+-   Supports worship leaders in making objective, data-informed
+    decisions
 
-<p align="center"><img src="https://github.com/YSayaovong/HFBC_Praise_Worship/blob/main/screenshots/top_10_all_time_pie.png" alt="Top 10 Songs (All Time - Pie)" width="800"/></p>  
+## Tech Stack
 
----
+-   Excel (Pivot tables, charts, KPI metrics)
+-   Python (data cleaning & transformation)
+-   JavaScript, HTML/CSS (dashboard UI)
+-   GitHub for version control
 
-## Methodology
-- Data collection from setlists & CCLI reporting  
-- Excel dashboard with dynamic charts  
-- Pivot tables for trend analysis  
+## Features
 
----
+-   Song frequency analysis\
+-   Rotation heatmaps\
+-   Top/least-used song indicators\
+-   Service-by-service KPI summaries\
+-   Trend insights to improve planning
 
-## Skills
-- Data cleaning & transformation  
-- Excel dashboard design  
-- Worship operations analytics  
+## How to Run
 
----
+1.  Clone the repository\
+2.  Open the Excel dashboard and refresh the data model\
+3.  Review the KPI pages\
+4.  Explore song frequency charts, rotation analysis, and insights
 
-## Results & Business Recommendation
-- Identified over-reliance on 10 songs  
-- Recommendation: diversify setlists to increase engagement  
+## Repository
 
----
-
-## Next Steps
-- Integrate API with Planning Center or CCLI  
-- Develop predictive scheduling for worship leaders  
+Make sure screenshots are added to showcase dashboard visuals.
