@@ -51,7 +51,3 @@ analytics.
 2.  Open the Excel dashboard and refresh the data model\
 3.  Review the KPI pages\
 4.  Explore song frequency charts, rotation analysis, and insights
-
-## Repository
-
-Make sure screenshots are added to showcase dashboard visuals.
