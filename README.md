@@ -1,53 +1,72 @@
-# Worship Analytics Dashboard -- Song Usage, Trends & KPI Tracking
+## 📚 Case Study: Song Rotation Imbalance & Worship Engagement Decline
 
-## Overview
+### ✅ Scenario
+A church notices a decline in worship engagement over several months.  
+Team members report:
+- The congregation is less responsive during services
+- New songs feel “overwhelming”
+- Old favorites are being repeated too often
+- Planning feels inconsistent between team members
 
-This project analyzes worship song usage, rotation patterns, and
-ministry KPIs across historical setlists. It transforms raw planning
-data into clean datasets and delivers insights through clear
-visualizations and summary metrics.
+The worship pastor wants data, not opinions, to understand what’s going on.
 
-## Business Need
+Your **Worship Analytics Dashboard** is used to analyze the last 18 months of setlists.
 
-Church worship teams often repeat songs without realizing how heavily
-certain titles are used. This leads to limited variety, lower
-engagement, and difficulty planning balanced setlists. Leaders need
-data-driven visibility into: - Song frequency and rotation gaps\
-- Overused or underutilized songs\
-- Setlist patterns by month, season, or service\
-- KPI trends that impact planning and team coordination
+---
 
-This dashboard solves that gap by turning raw setlists into actionable
-analytics.
+### ✅ Step 1 — Data Analysis & KPI Review
 
-## What This Project Solves
+After loading historical setlists into the dashboard, the following insights emerge:
 
--   Tracks song usage across months and years\
--   Highlights over-reliance on specific songs\
--   Identifies rotation gaps to support better planning\
--   Provides KPIs for song diversity, service consistency, and
-    scheduling patterns\
--   Supports worship leaders in making objective, data-informed
-    decisions
+**Key Findings**
+- Three songs account for **42%** of all rotations  
+- Average rotation gap (time before repeating a song) is **10–14 days**, far below the desired 30–45 days  
+- Seasonal songs were used inconsistently (e.g., Easter songs appearing in June)  
+- Only **17%** of the total song library has been used in the last 6 months  
+- Weekend vs. midweek services showed major inconsistency in song variety  
 
-## Tech Stack
+The dashboard highlights:
+- Frequency spikes  
+- Underused songs  
+- Rotation patterns  
+- Overlap between service types  
 
--   Excel (Pivot tables, charts, KPI metrics)
--   Python (data cleaning & transformation)
--   JavaScript, HTML/CSS (dashboard UI)
--   GitHub for version control
+---
 
-## Features
+### ✅ Step 2 — Identifying the Root Problem
 
--   Song frequency analysis\
--   Rotation heatmaps\
--   Top/least-used song indicators\
--   Service-by-service KPI summaries\
--   Trend insights to improve planning
+After reviewing trends and heatmaps:
 
-## How to Run
+**Root Causes Identified**
+1. **Setlists were being planned in isolation**, with no shared historical view  
+2. New songs were added too rapidly, causing burnout  
+3. High-energy songs were overused, while reflective songs were underused  
+4. Song leaders defaulted to personal favorites rather than rotation guidelines  
 
-1.  Clone the repository\
-2.  Open the Excel dashboard and refresh the data model\
-3.  Review the KPI pages\
-4.  Explore song frequency charts, rotation analysis, and insights
+This explains why the congregation felt the “same songs every week” while the team felt like they were introducing too many new songs.
+
+---
+
+### ✅ Step 3 — Actionable Recommendations
+
+Based on the analytics, the dashboard recommends:
+
+- Implementing a **minimum 30-day rotation rule** for high-frequency songs  
+- Reintroducing **20 underused songs** that still fit the ministry style  
+- Creating seasonal song buckets to prevent off-season scheduling  
+- Reducing new song introductions from 4 per month to **1–2 per month**  
+- Using the dashboard weekly to verify rotation gaps before planning  
+
+---
+
+### ✅ Step 4 — Outcome After 6 Weeks
+
+After adopting a data-informed planning process:
+
+- Congregational engagement visibly improved  
+- Overused songs dropped from 42% → **22%** of total rotations  
+- Underused songs increased by **31%**  
+- New songs were introduced more smoothly, with better congregational retention  
+- Team members became aligned because everyone was using the same analytics  
+
+Leaders reported “the most balanced setlists we’ve had all year.”
