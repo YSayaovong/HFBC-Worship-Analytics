@@ -10,8 +10,6 @@ Team members report:
 
 The worship pastor wants data, not opinions, to understand what’s going on.
 
-Your **Worship Analytics Dashboard** is used to analyze the last 18 months of setlists.
-
 ---
 
 ### ✅ Step 1 — Data Analysis & KPI Review
