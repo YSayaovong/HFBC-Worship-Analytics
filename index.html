@@ -5,151 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HFBC – Praise & Worship Dashboard</title>
 
-  <link rel="stylesheet" href="style.css?v=2026-02-11" />
+  <link rel="stylesheet" href="style.css?v=2026-02-11-1" />
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="script.js?v=2026-02-11" defer></script>
+  <script src="script.js?v=2026-02-11-1" defer></script>
 </head>
 <body>
   <main class="container">
     <header class="page-header">
       <h1>HFBC – Praise & Worship</h1>
-      <p class="muted">Live view from GitHub spreadsheets (English & Hmong supported).</p>
+      <p class="muted">Live view from GitHub spreadsheets.</p>
     </header>
-
-    <div class="grid-2">
-      <div class="col">
-        <section class="card">
-          <h2>Weekly Practices</h2>
-          <div class="table-wrap">
-            <table class="table">
-              <thead><tr><th>Date</th><th>Time</th></tr></thead>
-              <tbody id="weekly-practice-body"></tbody>
-            </table>
-          </div>
-          <p class="muted">Holds today's entries until 11:59 PM (no early rollover).</p>
-        </section>
-
-        <section class="card">
-          <h2>Additional Practice</h2>
-          <div class="table-wrap">
-            <table class="table">
-              <thead><tr><th>Date</th><th>Time</th></tr></thead>
-              <tbody id="additional-practice-body"></tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-
-      <div class="col">
-        <section class="card">
-          <h2>Worship Team Members</h2>
-          <div class="members-grid">
-            <div class="members-left">
-              <h3>Worship Leader</h3>
-              <ul id="leader-list" class="plain-list"></ul>
-              <h3>Musician</h3>
-              <ul id="musician-list" class="plain-list"></ul>
-            </div>
-            <div class="members-right">
-              <h3>Singers</h3>
-              <ul id="singers-list" class="plain-list"></ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Training</h2>
-          <div class="table-wrap">
-            <table class="table">
-              <thead><tr><th>Date</th><th>Time</th><th>Passage</th><th>Bible Verse</th></tr></thead>
-              <tbody id="training-body"></tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <section class="card">
-      <h2>Announcements</h2>
-      <div class="table-wrap">
-        <table class="table">
-          <thead><tr><th>Date</th><th>Announcement (English)</th><th>Lus Tshaj Tawm (Hmong)</th></tr></thead>
-          <tbody id="announcements-body"></tbody>
-        </table>
-      </div>
-      <p class="muted">Shows the last 31 days.</p>
-    </section>
-
-    <section class="card">
-      <h2>Bible Study</h2>
-      <div class="table-wrap">
-        <table class="table">
-          <thead><tr><th>Date</th><th>Topic</th><th>Bible Verse</th></tr></thead>
-          <tbody id="bible-study-body"></tbody>
-        </table>
-      </div>
-      <p class="muted">Current week + previous 3 weeks.</p>
-    </section>
 
     <section class="card">
       <h2>Setlist</h2>
       <div class="grid-2">
         <div class="col">
           <h3>Upcoming (Next Service)</h3>
-          <div class="table-wrap">
-            <table class="table">
-              <thead id="setlist-up-head"></thead>
-              <tbody id="setlist-up-body"></tbody>
-            </table>
-          </div>
+          <table class="table">
+            <thead id="setlist-up-head"></thead>
+            <tbody id="setlist-up-body"></tbody>
+          </table>
         </div>
         <div class="col">
           <h3>Last (Previous Service)</h3>
-          <div class="table-wrap">
-            <table class="table">
-              <thead id="setlist-last-head"></thead>
-              <tbody id="setlist-last-body"></tbody>
-            </table>
-          </div>
+          <table class="table">
+            <thead id="setlist-last-head"></thead>
+            <tbody id="setlist-last-body"></tbody>
+          </table>
         </div>
       </div>
-      <p class="muted">Shows the nearest upcoming service and the most recent past service from your sheet.</p>
     </section>
 
     <section class="card">
       <h2>Song Analytics</h2>
 
-      <div class="charts">
-        <div class="chart-card">
-          <h3>Top 10 — Last 52 Weeks</h3>
-          <div id="chart-top10-played" class="chart-area chart-area-lg"></div>
-          <table class="table">
-            <thead><tr><th>Song</th><th>Plays</th></tr></thead>
-            <tbody id="table-top10-window"></tbody>
-          </table>
-        </div>
+      <div class="chart-card">
+        <h3>Top 10 — Last 52 Weeks</h3>
+        <div id="chart-top10-played" style="height:400px;"></div>
+      </div>
 
-        <div class="chart-card">
-          <h3>Top 10 — All Time</h3>
-          <div id="chart-top10-alltime" class="chart-area chart-area-lg"></div>
-          <table class="table">
-            <thead><tr><th>Song</th><th>Plays</th></tr></thead>
-            <tbody id="table-top10-alltime"></tbody>
-          </table>
-        </div>
+      <div class="chart-card">
+        <h3>Top 10 — All Time</h3>
+        <div id="chart-top10-alltime" style="height:400px;"></div>
+      </div>
 
-        <div class="chart-card">
-          <h3>Weekly Song Volume — Last 26 Weeks</h3>
-          <div id="chart-weekly-trend" class="chart-area chart-area-lg"></div>
-          <p class="muted">Counts total songs listed per week (excludes N/A / Church Close).</p>
-        </div>
+      <div class="chart-card">
+        <h3>Weekly Song Volume — Last 26 Weeks</h3>
+        <div id="chart-weekly-trend" style="height:400px;"></div>
+      </div>
 
-        <div class="chart-card">
-          <h3>Songbook / Source Mix — Last 52 Weeks</h3>
-          <div id="chart-source-mix" class="chart-area chart-area-lg"></div>
-          <p class="muted">Uses the sheet’s “Book/Source” column if present (e.g., HBNA Songbook).</p>
-        </div>
+      <div class="chart-card">
+        <h3>Songbook / Source Mix — Last 52 Weeks</h3>
+        <div id="chart-source-mix" style="height:400px;"></div>
       </div>
     </section>
   </main>
