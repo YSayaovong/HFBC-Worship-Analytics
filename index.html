@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HFBC – Praise & Worship Dashboard</title>
 
-  <link rel="stylesheet" href="style.css?v=2025-10-02g" />
+  <link rel="stylesheet" href="style.css?v=2026-02-11" />
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="script.js?v=2025-10-02g" defer></script>
+  <script src="script.js?v=2026-02-11" defer></script>
 </head>
 <body>
   <main class="container">
@@ -96,28 +96,59 @@
       <h2>Setlist</h2>
       <div class="grid-2">
         <div class="col">
-          <h3>Upcoming Week</h3>
-          <div class="table-wrap"><table class="table"><thead id="setlist-up-head"></thead><tbody id="setlist-up-body"></tbody></table></div>
+          <h3>Upcoming (Next Service)</h3>
+          <div class="table-wrap">
+            <table class="table">
+              <thead id="setlist-up-head"></thead>
+              <tbody id="setlist-up-body"></tbody>
+            </table>
+          </div>
         </div>
         <div class="col">
-          <h3>Last Week</h3>
-          <div class="table-wrap"><table class="table"><thead id="setlist-last-head"></thead><tbody id="setlist-last-body"></tbody></table></div>
+          <h3>Last (Previous Service)</h3>
+          <div class="table-wrap">
+            <table class="table">
+              <thead id="setlist-last-head"></thead>
+              <tbody id="setlist-last-body"></tbody>
+            </table>
+          </div>
         </div>
       </div>
+      <p class="muted">Shows the nearest upcoming service and the most recent past service from your sheet.</p>
     </section>
 
     <section class="card">
       <h2>Song Analytics</h2>
+
       <div class="charts">
         <div class="chart-card">
           <h3>Top 10 — Last 52 Weeks</h3>
           <div id="chart-top10-played" class="chart-area chart-area-lg"></div>
-          <table class="table"><thead><tr><th>Song</th><th>Plays</th></tr></thead><tbody id="table-top10-window"></tbody></table>
+          <table class="table">
+            <thead><tr><th>Song</th><th>Plays</th></tr></thead>
+            <tbody id="table-top10-window"></tbody>
+          </table>
         </div>
+
         <div class="chart-card">
           <h3>Top 10 — All Time</h3>
           <div id="chart-top10-alltime" class="chart-area chart-area-lg"></div>
-          <table class="table"><thead><tr><th>Song</th><th>Plays</th></tr></thead><tbody id="table-top10-alltime"></tbody></table>
+          <table class="table">
+            <thead><tr><th>Song</th><th>Plays</th></tr></thead>
+            <tbody id="table-top10-alltime"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-card">
+          <h3>Weekly Song Volume — Last 26 Weeks</h3>
+          <div id="chart-weekly-trend" class="chart-area chart-area-lg"></div>
+          <p class="muted">Counts total songs listed per week (excludes N/A / Church Close).</p>
+        </div>
+
+        <div class="chart-card">
+          <h3>Songbook / Source Mix — Last 52 Weeks</h3>
+          <div id="chart-source-mix" class="chart-area chart-area-lg"></div>
+          <p class="muted">Uses the sheet’s “Book/Source” column if present (e.g., HBNA Songbook).</p>
         </div>
       </div>
     </section>
