@@ -24,3 +24,15 @@ h3{margin:.25rem 0 .5rem;color:var(--accent);font-size:1.05rem}
 .chart-area{width:100%;height:300px}
 .chart-area-lg{height:420px}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:.5rem;vertical-align:middle}
+
+
+/* ===== Accessibility / Color-friendly tweaks ===== */
+a{color:var(--accent)}
+a:hover{opacity:.9}
+.table tr:hover{background:rgba(147,197,253,.08)}
+.table th{color:var(--text);font-weight:600}
+.table td{color:var(--text)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+
+/* Keep Google Charts readable on dark background */
+.chart-card{background:var(--card)}
