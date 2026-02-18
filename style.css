@@ -1,5 +1,10 @@
 :root{
-  --bg:#0b1020; --card:#0f172a; --border:#1f2937; --text:#e5e7eb; --muted:#9aa3b2; --accent:#93c5fd;
+  --bg:#0b1020;
+  --card:#0f172a;
+  --border:#1f2937;
+  --text:#e5e7eb;
+  --muted:#9aa3b2;
+  --accent:#93c5fd;
 }
 
 *{box-sizing:border-box}
@@ -14,12 +19,12 @@ html,body{
   line-height:1.5;
 }
 
-/* FULL WIDTH: no max-width cap */
+/* FULL WIDTH */
 .container{
   width:100%;
   max-width:none;
   margin:0;
-  padding:1.2rem 1rem;
+  padding:1.2rem 1.5rem;
 }
 
 .page-header h1{margin:.2rem 0 .3rem 0}
@@ -29,34 +34,54 @@ html,body{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:12px;
-  padding:1rem;
-  margin-bottom:1rem;
+  padding:1.2rem;
+  margin-bottom:1.5rem;
   box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
 
-h2{margin:0 0 .7rem 0;font-size:1.25rem}
-h3{margin:.25rem 0 .5rem;color:var(--accent);font-size:1.05rem}
+h2{margin:0 0 .8rem 0;font-size:1.3rem}
+h3{margin:.25rem 0 .6rem;color:var(--accent);font-size:1.05rem}
 
+/* Tables */
 .table-wrap{overflow-x:auto}
 .table{width:100%;border-collapse:collapse}
-.table th,.table td{padding:.6rem .75rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.table th,.table td{
+  padding:.7rem .85rem;
+  border-bottom:1px solid var(--border);
+  text-align:left;
+}
+.table tr:hover{
+  background:rgba(147,197,253,.08);
+}
 
-.grid-2{display:grid;grid-template-columns:1fr;gap:1rem}
-.grid-2 .col{min-width:0}
-@media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
+/* Grid */
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+}
+@media(min-width:900px){
+  .grid-2{grid-template-columns:1fr 1fr}
+}
 
+/* Charts */
 .chart-card{
+  width:100%;
+  margin-top:1.5rem;
   background:var(--card);
   border:1px solid var(--border);
   border-radius:12px;
   padding:1rem;
-  margin-top:1rem;
+}
+
+.chart-card > div{
+  width:100% !important;
 }
 
 /* Accessibility */
 a{color:var(--accent)}
-a:hover{opacity:.9}
-.table tr:hover{background:rgba(147,197,253,.08)}
-.table th{color:var(--text);font-weight:600}
-.table td{color:var(--text)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+  border-radius:6px;
+}
