@@ -1,15 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HFBC – Praise & Worship Dashboard</title>
 
-  <link rel="stylesheet" href="style.fixed.css?v=2026-02-13-1" />
+  <!-- Rename your CSS file to style.css OR keep your current name and match it here -->
+  <link rel="stylesheet" href="./style.css?v=2026-02-18-1" />
+
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
-  <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="script.fixed.js?v=2026-02-13-1" defer></script>
+  <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+
+  <!-- Rename your JS file to script.js OR keep your current name and match it here -->
+  <script src="./script.js?v=2026-02-18-1" defer></script>
 </head>
+
 <body>
   <main class="container">
     <header class="page-header">
@@ -19,20 +24,26 @@
 
     <section class="card">
       <h2>Setlist</h2>
+
       <div class="grid-2">
         <div class="col">
           <h3>Upcoming (Next Service)</h3>
-          <table class="table">
-            <thead id="setlist-up-head"></thead>
-            <tbody id="setlist-up-body"></tbody>
-          </table>
+          <div class="table-wrap">
+            <table class="table">
+              <thead id="setlist-up-head"></thead>
+              <tbody id="setlist-up-body"></tbody>
+            </table>
+          </div>
         </div>
+
         <div class="col">
           <h3>Last (Previous Service)</h3>
-          <table class="table">
-            <thead id="setlist-last-head"></thead>
-            <tbody id="setlist-last-body"></tbody>
-          </table>
+          <div class="table-wrap">
+            <table class="table">
+              <thead id="setlist-last-head"></thead>
+              <tbody id="setlist-last-body"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
