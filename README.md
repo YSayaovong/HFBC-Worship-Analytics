@@ -1,7 +1,7 @@
 # Worship Analytics Dashboard — Song Usage & Rotation KPI System
 
 A data analytics project that converts weekly worship setlists into structured operational insights.  
-Built end‑to‑end with **Python, pandas, and matplotlib**, this project helps worship teams understand:
+Built end-to-end with **Python, pandas, and matplotlib**, this project helps worship teams understand:
 
 - Which songs are overused  
 - Which songs are underused  
@@ -21,7 +21,7 @@ Church worship teams often plan setlists independently with limited visibility i
 - Misaligned song rotation  
 - Inconsistent worship engagement  
 
-This project solves those problems using analytics. Based on historical setlists, it models and summarizes song usage patterns to support data‑informed planning.
+This project solves those problems using analytics. Based on historical setlists, it models and summarizes song usage patterns to support data-informed planning.
 
 ---
 
@@ -37,7 +37,7 @@ This project solves those problems using analytics. Based on historical setlists
 | `outputs/fact_song_usage.csv` | Normalized song usage fact table |
 | `outputs/dim_song.csv` | Song dimension metadata |
 | `outputs/dim_date.csv` | Date dimension |
-| `outputs/song_usage_kpis.csv` | Song‑level KPI summary |
+| `outputs/song_usage_kpis.csv` | Song-level KPI summary |
 | `outputs/figures/top10_songs.png` | Top 10 song usage chart |
 | `outputs/figures/rotation_distribution.png` | Rotation distribution histogram |
 
@@ -60,7 +60,7 @@ Feature engineering includes:
 ### 3. Analyze & Visualize  
 - Compute KPIs  
 - Produce CSV outputs  
-- Create publication‑ready charts  
+- Create publication-ready charts  
 
 ---
 
@@ -100,6 +100,12 @@ These are strong talking points for interviews.
 ---
 
 ## 🧪 How To Run
+
+### Install dependencies
+
+```powershell
+pip install -r requirements.txt
+```
 
 ### Build normalized dataset
 
@@ -147,6 +153,8 @@ Worship-Analytics-Dashboard/
 │       ├── top10_songs.png
 │       └── rotation_distribution.png
 │
+├── requirements.txt
+│
 └── README.md
 ```
 
@@ -161,6 +169,3 @@ Worship-Analytics-Dashboard/
 - Visualization  
 - Production-ready project structure  
 - Portfolio-level storytelling  
-
----
-
