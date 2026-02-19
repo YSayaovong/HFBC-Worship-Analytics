@@ -152,14 +152,6 @@ Worship-Analytics-Dashboard/
 
 ---
 
-## 💬 Interview Talking Points
-
-You can explain:
-
-> “I treated the worship setlist like a transactional dataset, engineered rotation‑based KPIs, and built a complete analysis pipeline in Python. It demonstrates Excel‑to‑Python migration, data modeling, storytelling, and operational analytics.”
-
----
-
 ## ✅ Skills Demonstrated
 
 - Python (pandas, matplotlib)  
