@@ -104,7 +104,7 @@ These are strong talking points for interviews.
 ### Build normalized dataset
 
 ```powershell
-cd "E:\Career Projects\Data Analyst Projects\Worship Analytics Dashboard"
+cd "youdrive\Worship Analytics Dashboard"
 py notebooks\build_song_usage_data.py
 ```
 
