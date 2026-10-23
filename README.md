@@ -1,4 +1,4 @@
-# Worship Song Usage Analytics
+# HFBC Worship Analytics
 ## Scope
 Operational reporting example for historical song usage and rotation. Relevant analyst skills include data preparation, tabular modeling, grouping, joins, KPI reporting and chart generation.
 
@@ -6,7 +6,7 @@ Operational reporting example for historical song usage and rotation. Relevant a
 - `data/setlist.xlsx`: source workbook.
 - `notebooks/build_song_usage_data.py`: prepares date/song dimensions and song-usage facts.
 - `notebooks/song_usage_kpi_report.py`: reads prepared CSVs, joins song metadata, calculates usage/rotation/recency metrics and writes reports/charts.
-- `outputs/`: saved dimension, fact and KPI CSVs.
+- `outputs/`: saved dimension, fact and KPI CSVs; `outputs/figures/`: generated PNG charts.
 - `requirements.txt`: dependencies.
 ```bash
 pip install -r requirements.txt
