@@ -19,9 +19,13 @@ Review source paths and schemas before running.
 The report counts song appearances, averages recorded DaysSinceLast values, finds last-use dates and applies configurable threshold rules. The current thresholds flag average rotation below 21 days and last use more than 90 days ago.
 
 ## Important limitations
-Recency uses the computer's current date. Saved results and README snapshots will not be reproducible across dates until an explicit reporting date is added. Validate song-name uniqueness before joining metadata, distinguish song appearances from services, and account for incomplete history and missing intervals.
+Recency defaults to the last source date, producing a stable historical snapshot. Use `python notebooks/song_usage_kpi_report.py --as-of 2026-10-23` for a later explicit reporting date. Dates before the last source date are rejected. Metadata joins require unique, populated song names and full fact coverage; a duplicate dimension cannot silently multiply appearances. Distinguish song appearances from services and account for incomplete history and missing intervals.
 
 Usage frequency alone does not demonstrate congregation fatigue, worship quality or the reason a song was selected. Threshold flags are planning prompts, not conclusions about people or ministry performance.
 
 ![Top songs](outputs/figures/top10_songs.png)
 ![Rotation distribution](outputs/figures/rotation_distribution.png)
+
+
+## Validation and saved outputs
+Run `python -m unittest discover -s tests -v` for four date/join checks. The included workbook rebuilds 172 song appearances across 118 songs; the last source date is February 15, 2026. The KPI export records `report_as_of`. The saved CSVs and charts have been regenerated for that historical date; they are not a current service schedule. Date/join improvements were developed with AI assistance. This is a supporting operations-reporting project, not one of the two resume projects.

@@ -1,12 +1,18 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+import argparse
+from quality_checks import merge_song_metadata, report_date
+
+parser=argparse.ArgumentParser(description="Song usage snapshot; default date is the last source date.")
+parser.add_argument("--as-of", help="Reporting date YYYY-MM-DD, on or after the last source date")
+args=parser.parse_args()
 
 # ---------- Paths ----------
 ROOT = Path(__file__).resolve().parents[1]
 output_dir = ROOT / "outputs"
 fig_dir = output_dir / "figures"
-fig_dir.mkdir(exist_ok=True)
+fig_dir.mkdir(parents=True, exist_ok=True)
 
 # ---------- Load prepared data ----------
 fact = pd.read_csv(output_dir / "fact_song_usage.csv", parse_dates=["Date"])
@@ -14,7 +20,7 @@ dim_song = pd.read_csv(output_dir / "dim_song.csv")
 dim_date = pd.read_csv(output_dir / "dim_date.csv", parse_dates=["Date"])
 
 # Merge song metadata onto fact for easier reporting
-df = fact.merge(dim_song, left_on="Song", right_on="SongName", how="left")
+df = merge_song_metadata(fact, dim_song)
 
 # ---------- Song-level KPIs ----------
 song_stats = (
@@ -28,7 +34,8 @@ song_stats = (
 )
 
 # Days since last used
-today = pd.Timestamp.today().normalize()
+today = report_date(fact, args.as_of)
+print(f"Reporting as of: {today.date()}")
 song_stats["days_since_last_used"] = (today - song_stats["last_use"]).dt.days
 
 # Classification flags
@@ -48,7 +55,7 @@ print()
 
 # ---------- Top 10 songs by usage ----------
 top10 = (
-    song_stats.sort_values("total_uses", ascending=False)
+    song_stats.sort_values(["total_uses", "SongName"], ascending=[False, True])
               .head(10)
 )
 
@@ -78,6 +85,7 @@ print()
 
 # ---------- Save detailed KPI table ----------
 kpi_path = output_dir / "song_usage_kpis.csv"
+song_stats["report_as_of"] = today.date().isoformat()
 song_stats.to_csv(kpi_path, index=False)
 print(f"Saved song-level KPIs to: {kpi_path}")
 
@@ -130,3 +138,4 @@ plt.savefig(rotation_path)
 plt.close()
 
 print(f"Saved chart: {rotation_path}")
+
