@@ -26,6 +26,3 @@ Usage frequency alone does not demonstrate congregation fatigue, worship quality
 ![Top songs](outputs/figures/top10_songs.png)
 ![Rotation distribution](outputs/figures/rotation_distribution.png)
 
-
-## Validation and saved outputs
-Run `python -m unittest discover -s tests -v` for four date/join checks. The included workbook rebuilds 172 song appearances across 118 songs; the last source date is February 15, 2026. The KPI export records `report_as_of`. The saved CSVs and charts have been regenerated for that historical date; they are not a current service schedule. Date/join improvements were developed with AI assistance. This is a supporting operations-reporting project, not one of the two resume projects.
